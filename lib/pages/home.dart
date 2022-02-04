@@ -19,7 +19,7 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         elevation: 0,
         backgroundColor:isSearch? Colors.white : customDarkBlue,
-        title: isSearch ?customTextFeild(50, double.infinity, 'Search', searchController, TextInputType.text) : Center(
+        title: isSearch ?customTextFeild(50, double.infinity, 'What can I search for you?', searchController, TextInputType.text) : Center(
           child:  Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -61,6 +61,10 @@ class _HomeState extends State<Home> {
         ],
       ),
        drawer: isSearch? null :Drawer(),
+       backgroundColor: customBackgroundColor,
+       body: ListView(children: [
+         Container(height:200,color: Colors.red,)
+       ],),
     );
   }
 }
